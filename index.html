@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Subscribe form — Practical 7</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="card-title">
+      <div class="art">
+        <!-- декоративный блок -->
+        <div class="main-blob"><img src="assets/card.jpg" alt="Card-Art" /></div>
+      </div>
+      <h2 id="card-title">Підпишіться на мій сайт</h2>
+      <p class="subtitle">Приєднуйтесь до мого сайту, і вигравайте супер кар</p>
+
+      <form id="subscribe-form" class="form" novalidate>
+        <div class="input-wrap">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            placeholder="your@email.com"
+            autocomplete="email"
+            required
+            aria-describedby="error-msg"
+          />
+        </div>
+        <p id="error-msg" class="error" aria-live="polite"></p>
+        <button type="submit" class="btn primary">Підписатися</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Dialog success -->
+  <dialog id="success-dialog" class="dialog">
+    <div class="dialog-card">
+      <div class="emoji"><img src="assets/icon.jpg" alt="Success Icon" /></div>
+      <h3>Тепер ви отримуєте спам на ваш <span id="user-email">&lt;email&gt;</span>!</h3>
+      <button id="close-dialog" class="btn primary small">Дякую!</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
